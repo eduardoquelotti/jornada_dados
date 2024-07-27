@@ -47,20 +47,20 @@
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-nome = input('Informe o nome do usuário: ')
+# nome = input('Informe o nome do usuário: ')
 
-while True:
-    idade = int(input('Informe a idade do usuário: '))
-    if idade < 18 or idade > 65:
-        print('Idade não permitida')
-        continue
-    while True:
-        email = input('Informe o email do usuário: ')
-        if '@' not in email or '.' not in email:
-            print('Email inválido informado')
-        else:
-            print('Usuário adicionado')
-            exit()
+# while True:
+#     idade = int(input('Informe a idade do usuário: '))
+#     if idade < 18 or idade > 65:
+#         print('Idade não permitida')
+#         continue
+#     while True:
+#         email = input('Informe o email do usuário: ')
+#         if '@' not in email or '.' not in email:
+#             print('Email inválido informado')
+#         else:
+#             print('Usuário adicionado')
+#             exit()
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
