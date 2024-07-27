@@ -4,18 +4,31 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
-quantidade = int(input('Informe a quantidade: '))
-preco = float(input('Informe o preço: '))
+# quantidade = int(input('Informe a quantidade: '))
+# preco = float(input('Informe o preço: '))
 
-if quantidade > 0 and preco > 0:
-    print('Dados válidos inseridos no banco')
-else:
-    print('Dados inválidos inseridos no banco')
+# if quantidade > 0 and preco > 0:
+#     print('Dados válidos inseridos no banco')
+# else:
+#     print('Dados inválidos inseridos no banco')
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+# Temperatura < 18 C é baixa
+# Temperatura >= 18 e <= 26 é normal
+# Temperatura > 26 é alta
+
+# temperatura = float(input('Informe a temperatura do dia: '))
+
+# if temperatura < 18:
+#     print('Baixa')
+# elif temperatura >= 18 and temperatura <= 26:
+#     print('Normal')
+# else:
+#     print('Alta')
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
@@ -23,11 +36,31 @@ else:
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
+# log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+
+# if log['level'] == 'ERROR':
+#     print(log['message'])
+
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+
+nome = input('Informe o nome do usuário: ')
+
+while True:
+    idade = int(input('Informe a idade do usuário: '))
+    if idade < 18 or idade > 65:
+        print('Idade não permitida')
+        continue
+    while True:
+        email = input('Informe o email do usuário: ')
+        if '@' not in email or '.' not in email:
+            print('Email inválido informado')
+        else:
+            print('Usuário adicionado')
+            exit()
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
