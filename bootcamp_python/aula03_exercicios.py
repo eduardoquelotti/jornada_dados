@@ -12,6 +12,8 @@
 # else:
 #     print('Dados inválidos inseridos no banco')
 
+
+
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
@@ -30,6 +32,7 @@
 #     print('Alta')
 
 
+
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
@@ -40,6 +43,8 @@
 
 # if log['level'] == 'ERROR':
 #     print(log['message'])
+
+
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
@@ -62,6 +67,8 @@
 #             print('Usuário adicionado')
 #             exit()
 
+
+
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
@@ -75,6 +82,7 @@
 #     print('Transação suspeita')
 # else:
 #     print('Transação normal')
+
 
 
 ### Exercício 6. Contagem de Palavras em Textos
@@ -109,6 +117,8 @@
 
 # print(contador)
 
+
+
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
@@ -131,31 +141,102 @@
 
 
 
-
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"}
+# ]
+
+# usuarios_validados = []
+# usuarios_invalidos = []
+
+# for usuario in usuarios:
+#     if usuario['nome'] != "" and usuario['email'] != "":
+#         usuarios_validados.append(usuario)
+#     else:
+#         usuarios_invalidos.append(usuario)
+
+# print("Usuários Validados:", usuarios_validados)
+# print("Usuários Invalidos:", usuarios_invalidos)
+
+
+# usuarios_validados02 = [user for user in usuarios if user['nome'] != "" and user['email'] != ""]
+# usuarios_invalidos02 = [user for user in usuarios if user['nome'] == "" or user['email'] == ""]
+
+# print("Usuários Validados 02:", usuarios_validados02)
+# print("Usuários Invalidos 02:", usuarios_invalidos02)
 
 
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+# numeros = range(1,11)
+# pares = [numero for numero in numeros if numero % 2 == 0]
+# print(pares)
+
+
+
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800}
+# ]
+
+# total_por_categoria = {}
+# for venda in vendas:
+#     categoria = venda['categoria']
+#     valor = venda['valor']
+#     if categoria in total_por_categoria:
+#         total_por_categoria[categoria] += valor
+#     else:
+#         total_por_categoria[categoria] = valor
+
+# print(total_por_categoria)
+
+
 
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
 
+# while True:
+#     entrada = input('Escreva a palavra desejada: ')
+#     if entrada == 'Sair':
+#         exit()
+#     else:
+#         print('Palavra preenchida: ', entrada)
+
+
+
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+# while True:
+#     numero_selecionado = int(input('Informe um número: '))
+#     if numero_selecionado not in range(0,6):
+#         print('Número inválido informado: ',numero_selecionado)
+#         continue
+#     else:
+#         print('Número válido informado: ', numero_selecionado)
+
+
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
-### Exercício 14. Tentativas de Conexão
-# Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+pagina_atual = 1
+paginas_totais = 5
 
-### Exercício 15. Processamento de Dados com Condição de Parada
-# Processar itens de uma lista até encontrar um valor específico que indica a parada.
+while pagina_atual <= paginas_totais:
+    print(f'Processando página {pagina_atual} de {paginas_totais}')
+    pagina_atual += 1
+
+print('Todas as páginas foram processadas')
