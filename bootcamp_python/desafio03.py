@@ -1,10 +1,10 @@
 import os
 os.system('clear')
 
-ADD_BONUS = 1000
-nome_valido = False
-salario_valido = False
-bonus_valido = False
+ADD_BONUS: int = 1000
+nome_valido: bool = False
+salario_valido: bool = False
+bonus_valido: bool = False
 
 print('====================================================')
 print('================CALCULADORA DE RENDA================')
@@ -21,7 +21,7 @@ while True:
     while nome_valido == False:
         try:
             # Solicitar nome do usuário
-            nome = input("Informe seu nome: ")
+            nome: str = input("Informe seu nome: ")
             
             if nome == 'S':
                 os.system('clear')
@@ -47,11 +47,11 @@ while True:
         try:
             # Solicita salário
             print('')
-            salario_input = input(f"{nome}, informe seu salário: ")
+            salario_input: float = input(f"{nome}, informe seu salário: ")
             if salario_input == 'S':
                 os.system('clear')
                 exit()
-            salario = float(salario_input)
+            salario: float = float(salario_input)
             if salario < 0:
                 print('O salário deve ser um valor positivo.')
                 continue
@@ -68,8 +68,8 @@ while True:
         try:
             # Solicita bônus
             print('')
-            bonus_input = input("Digite seu bônus: ")
-            bonus = float(bonus_input)
+            bonus_input: float = input("Digite seu bônus: ")
+            bonus: float = float(bonus_input)
             if bonus < 0:
                 print('O bônus deve ser um valor positivo.')
                 continue
@@ -92,6 +92,6 @@ while True:
             print('')
             
 
-    nome_valido = False
-    salario_valido = False
-    bonus_valido = False  
+    nome_valido: bool = False
+    salario_valido: bool = False
+    bonus_valido: bool = False  
