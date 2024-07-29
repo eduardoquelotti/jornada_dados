@@ -80,11 +80,62 @@
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
+# texto = "Hoje é um dia diferente. Hoje é um dia especial. Cruzeiro é gigante e será campeão e tudo"
+
+# lista = texto.split()
+
+# contador = {}
+
+# for palavra in lista:
+#     if palavra not in contador:
+#         contador[palavra] = 1
+#     else:
+#         contador[palavra] += 1
+
+# print(contador)
+
+
+# texto = "Hoje é um dia diferente. Hoje é um dia especial. Cruzeiro é gigante e será campeão e tudo"
+
+# lista = texto.split()
+
+# contador = {}
+
+# for palavra in lista:
+#     if palavra in contador:
+#         contador[palavra] += 1
+#     else:
+#         contador[palavra] = 1
+
+# print(contador)
+
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+# numeros = [10, 20, 30, 40, 50]
+
+# menor = min(numeros)
+# maior = max(numeros)
+
+# normalizados = []
+
+# for numero in numeros:
+#     normalizado = (numero - menor) / (maior - menor)
+#     normalizados.append(normalizado)
+
+# print("Normalizados Opção 1: ", normalizados)
+
+# normalizados_02 = [(x - menor) / (maior - menor) for x in numeros]
+
+# print("Normalizados Opção 2: ", normalizados_02)
+
+
+
+
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
