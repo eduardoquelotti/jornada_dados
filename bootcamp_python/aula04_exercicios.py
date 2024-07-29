@@ -68,13 +68,17 @@
 # Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 
 # lista_compras = ["maçã", "banana", "cereja"]
-
 # tabela_preco = {"maçã": 0.45, 
 #                 "banana": 0.30, 
 #                 "cereja": 0.65}
 
+# Opção 1:
 # preco_total = 0
 # for item in lista_compras:
 #     preco_total = preco_total + tabela_preco[item]
 
 # print('O valor total da compra é: R$ ', preco_total)
+
+#Opção 2:
+# total = sum(tabela_preco[item] for item in lista_compras)
+# print('O valor total da compra é: R$ ', total)
