@@ -1,8 +1,9 @@
 import csv
 import os
+from typing import List
 
 # Função para ler o arquivo
-def ler_csv(path):
+def ler_csv(path: str) -> List[dict]:
     if not os.path.exists(path):
         raise FileNotFoundError(f"O arquivo {path} não foi encontrado.")
     with open(path, mode='r', encoding='utf-8') as arquivo:
@@ -10,7 +11,7 @@ def ler_csv(path):
         return list(leitor)
 
 # Função para processar os dados em um dicionário
-def processar_dados(dados):
+def processar_dados(dados: List[dict]) -> dict:
     categorias = {}
     for item in dados:
         categoria = item['Categoria']
@@ -20,7 +21,7 @@ def processar_dados(dados):
     return categorias
 
 # Função para calcular o total de vendas por categoria
-def calcular_vendas_categoria(dados):
+def calcular_vendas_categoria(dados: dict) -> dict:
     vendas_por_categoria = {}
     for categoria, itens in dados.items():
         total_vendas = sum(float(item['Quantidade']) * float(item['Venda']) for item in itens)
@@ -32,9 +33,9 @@ def main():
     # Use o caminho absoluto para o arquivo CSV
     nome_arquivo = '/Users/eduardoquelotti/Projetos Python/jornada_dados/bootcamp_python/vendas.csv'
     try:
-        dados_brutos = ler_csv(nome_arquivo)
-        dados_processados = processar_dados(dados_brutos)
-        vendas_categoria = calcular_vendas_categoria(dados_processados)
+        dados_brutos: dict = ler_csv(nome_arquivo)
+        dados_processados: dict = processar_dados(dados_brutos)
+        vendas_categoria: dict = calcular_vendas_categoria(dados_processados)
         for categoria, total in vendas_categoria.items():
             print(f'{categoria}: R$ {total:.2f}')
     except FileNotFoundError as e:
