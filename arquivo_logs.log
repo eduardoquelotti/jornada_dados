@@ -1,0 +1,10 @@
+2024-07-31T23:34:35.575757-0300 DEBUG Log de debug - Geralmente utilizado para informar ou relembrar algo aula09_loguru.py
+2024-07-31T23:34:35.575917-0300 INFO Log de info - Geralmente utilizado para informações relevantes aula09_loguru.py
+2024-07-31T23:34:35.575981-0300 WARNING Log de aviso - Geralmente utilizado para informar que algo pode dar errado (ex de uso: mensagens que uma biblioteca ou função será descontinuada) aula09_loguru.py
+2024-07-31T23:34:35.576035-0300 ERROR Log de erro - Geralmente utilizado para reportar erros aula09_loguru.py
+2024-07-31T23:34:35.576080-0300 CRITICAL Log crítico - Geralmente utilizado quando acontece algo que aborta a aplicação aula09_loguru.py
+2024-07-31T23:35:19.080879-0300 | DEBUG | Log de debug - Geralmente utilizado para informar ou relembrar algo | arquivo: aula09_loguru.py
+2024-07-31T23:35:19.081006-0300 | INFO | Log de info - Geralmente utilizado para informações relevantes | arquivo: aula09_loguru.py
+2024-07-31T23:35:19.081070-0300 | WARNING | Log de aviso - Geralmente utilizado para informar que algo pode dar errado (ex de uso: mensagens que uma biblioteca ou função será descontinuada) | arquivo: aula09_loguru.py
+2024-07-31T23:35:19.081122-0300 | ERROR | Log de erro - Geralmente utilizado para reportar erros | arquivo: aula09_loguru.py
+2024-07-31T23:35:19.081166-0300 | CRITICAL | Log crítico - Geralmente utilizado quando acontece algo que aborta a aplicação | arquivo: aula09_loguru.py
