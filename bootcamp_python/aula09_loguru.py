@@ -2,7 +2,8 @@ from loguru import logger
 
 logger.add(
     "arquivo_logs.log",
-    format ="{time} | {level} | {message} | arquivo: {file}"
+    format ="{time} | {level} | {message} | arquivo: {file}",
+    rotation="5 MB"
     )
 
 logger.debug("Log de debug - Geralmente utilizado para informar ou relembrar algo")
